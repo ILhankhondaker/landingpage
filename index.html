@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>My Store</title>
+</head>
+
+<body>
+
+    <!-- marquee -->
+    <marquee class="bg-black text-white uppercase p-2" width="100%" direction="left" height="50px">
+        <div class="absolute top-0   animate-marquee2 whitespace-nowrap">
+            <span class="text-2xl mx-4">welcome !</span>
+            <span class="text-2xl mx-4">sitewide sale </span>
+            <span class="text-2xl mx-4">use code X for x% off !</span>
+            <span class="text-2xl mx-4">welcome !</span>
+            <span class="text-2xl mx-4">sitewide sale </span>
+            <span class="text-2xl mx-4">use code X for x% off !</span>
+            <span class="text-2xl mx-4">welcome !</span>
+            <span class="text-2xl mx-4">sitewide sale </span>
+            <span class="text-2xl mx-4">use code X for x% off !</span>
+            <span class="text-2xl mx-4">welcome !</span>
+            <span class="text-2xl mx-4">sitewide sale </span>
+            <span class="text-2xl mx-4">use code X for x% off !</span>
+        </div>
+    </marquee>
+
+    <!-- Navbar  -->
+    <nav class="  mx-10 lg:mx-40 ">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <a class="btn btn-ghost ">Home</a>
+                        <a class="btn btn-ghost ">Catalog</a>
+                        <a class="btn btn-ghost ">Contact</a>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex">
+                    <a class="btn btn-ghost ">Home</a>
+                    <a class="btn btn-ghost ">Catalog</a>
+                    <a class="btn btn-ghost ">Contact</a>
+                </div>
+
+            </div>
+            <div class="navbar-center  lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <h1 class="text-4xl font-bold">My Store</h1>
+                </ul>
+            </div>
+
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button class="btn btn-ghost btn-circle">
+                    <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- divider  -->
+    <div class="divider"></div>
+
+    <!-- hero section  -->
+    <main>
+
+        <div class="hero rounded-lg min-h-screen">
+            <div class="grid md:grid-cols-2 gap-10 items-center w-10/12 mx-auto">
+
+
+                <!-- image slider  -->
+                <div class="w3-content" style="max-width:1200px">
+                    <img class="mySlides" src="./dist/img1.webp" style="width:100%;display:none">
+                    <img class="mySlides" src="./dist/img4.webp" style="width:100%">
+                    <img class="mySlides" src="./dist/img5.webp" style="width:100%;display:none">
+
+                    <div class="w3-row-padding w3-section">
+                        <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="./dist/img1.webp"
+                                style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                        </div>
+
+                        <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="./dist/img4.webp"
+                                style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                        </div>
+                        <div class="w3-col s4">
+                            <img class="demo w3-opacity w3-hover-opacity-off" src="./dist/img5.webp"
+                                style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- title content  -->
+                <div>
+                    <!-- rating  -->
+                    <div class="flex">
+                        <div class="rating  ">
+                            <input type=" radio" name="rating-1" class="mask mask-star" />
+                            <input type="radio" name="rating-1" class="mask mask-star" />
+                            <input type="radio" name="rating-1" class="mask mask-star" />
+                            <input type="radio" name="rating-1" class="mask mask-star" />
+                            <input type="radio" name="rating-1" class="mask mask-star" checked="checked" />
+                        </div>
+                        <p>4.8</p>
+                    </div>
+
+                    <h1 class="text-5xl font-bold my-4">Skincare Filter</h1>
+
+                    <div class="flex my-4">
+                        <h1 class="line-through text-4xl font-bold text-gray-300">€65,00</h1>
+                        <h1 class="text-4xl font-bold ">€34,90</h1>
+                        <h1 class="badge bg-[#fe5b38] text-white p-5 text-xl">45% OFF</h1>
+                    </div>
+
+                    <p class="my-6">
+                        Get softer, radiant, and healthier skin by the only water filter that's clinically tested and
+                        derm-approved.
+                    </p>
+                    <div class="flex justify-between">
+                        <h1 class="text-xl">qty</h1>
+                        <div class="qty-container rounded-lg border-2 w-[100px] mx-2">
+                            <button id="decrement" class="qty-btn">-</button>
+                            <input type="text" id="qty" value="1" readonly>
+                            <button id="increment" class="qty-btn">+</button>
+                        </div>
+                        <!-- <button class="btn btn-block bg-[#7edaae] capitalize">Add To Cart</button> -->
+                        <button class="btn  bg-[#7edaae] capitalize w-full">Add To Cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- sec 1 -->
+    <section>
+        <div class="grid md:grid-cols-2 items-center w-10/12 mx-auto lg:px-40">
+            <img class="md:order-2 object-cover ml-auto " src="./dist/person1.webp" width="600px" height="500px"
+                alt="Banner" />
+            <div>
+                <h1 class="text-4xl lg:text-[56px] font-bold leading-[1.1] mb-8">
+                    Say Hello To <br>
+                    Hydrated, Softer And <br>
+                    Glowing Skin
+                </h1>
+                <p>Remove 99.9% of chlorine, chloramine, certain hard metals, and
+                    hundreds of contaminants in tap water.</p>
+                <p>Your skin will be more clear, radiant and healthy — especially in
+                    the long run!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- sec2 -->
+    <section>
+        <div class="hero min-h-screen">
+            <div class="hero-content flex-col lg:flex-row">
+                <img src="./dist/person2.webp" class=" rounded-lg " width="600px" height="500px" />
+                <div>
+                    <h1 class="text-5xl font-bold">The 100% Faucet-Fit <br>
+                        Gaurantee</h1>
+                    <p class="py-6">
+                        Filterbaby is guaranteed to fit your faucet. In the rare event if it
+                        doesn't, we will send additional adaptors free of charge.
+
+                        We guarantee faucet fits and happiness.
+
+                        Try Risk-Free 60 days.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sec3 -->
+    <section>
+        <div class="grid md:grid-cols-2 items-center w-10/12 mx-auto lg:px-40">
+            <img class="md:order-2 object-cover ml-auto " src="./dist/person3.webp" width="600px" height="500px"
+                alt="Banner" />
+            <div>
+                <h1 class="text-4xl lg:text-[56px] font-bold leading-[1.1] mb-8">
+                    Unparalleled Quality, Lifetime Warranty
+                </h1>
+                <p>As healthcare professionals, we prioritizes ingredient formulation and obsess over product quality.
+                    If for any reason your Filterbaby needs to be replaced, you can trust us to take care of it.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-[#f7f6f5]">
+        <div class="grid gap-4 md:grid-cols-2 items-center w-10/12 mx-auto  lg:px-40 my-5 p-10">
+
+            <div>
+                <h1 class="text-4xl lg:text-[45px] font-bold leading-[1.1] mb-8">
+                    A Powerful Derm-Tested Filter That Improves Skin Hydration In Just 14 Days.
+                </h1>
+            </div>
+
+            <div>
+                <div class="collapse collapse-plus bg-white rounded-none my-5">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">How do I know Filterbaby will fit on my faucet?
+                    </div>
+                    <div class="collapse-content">
+                        <div class="flex">
+                            <img class="w-[60px]" src="./dist/91.avif" alt="" srcset="">
+                            <p>agreed it’s the best their skin’s ever felt.*</p>
+                        </div>
+                        <div class="flex my-5">
+                            <img class="w-[60px]" src="./dist/93.avif" alt="" srcset="">
+                            <p>agreed it’s the best their skin’s ever felt.*</p>
+                        </div>
+                        <div class="flex">
+                            <img class="w-[60px]" src="./dist/63.avif" alt="" srcset="">
+                            <p>agreed it’s the best their skin’s ever felt.*</p>
+                        </div>
+                        <p>*Results from a consumer study of 100 Filterbaby users.</p>
+                        <p>**Results from clinical study with 35 participants.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-white rounded-none my-5">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">How To Use</div>
+                    <div class="collapse-content">
+                        <div>
+                            <img src="./dist/faq1.webp" alt="" srcset="">
+                            <p>Your kit comes with one filter cartridge inside, this should last you 3 months. For
+                                sensitive skin or areas with worse water quality, it is recommended to change your
+                                filter more often. To keep your water clean and fresh, you should change your filter at
+                                least once every 3 months. It's especially worth it in the long run.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-white rounded-none my-5">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">How To Use</div>
+                    <div class="collapse-content">
+                        <p>1 Filterbaby Starter Kit includes: 1 filter (3 months supply), 4 aerator keys, 1 adaptor key,
+                            10 faucet adaptors (you only need 1), manual. It has everything you need to easily install
+                            your Filterbaby in under 5 minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience  section  -->
+
+    <section class="bg-[#eaf3ff] p-20">
+
+        <h1 class="text-[60px] font-bold">Experience The Difference. Why <br>
+            Filterbaby Vs. Other Filters?</h1>
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-7 lg:mx-40">
+
+            <div class="card   w-96 ">
+                <div class="card-body">
+                    <h2 class="text-center my-5 text-xl font-bold">Without Filterbaby</h2>
+
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Chlorinated water</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>
+                            Hard metals can clog pores</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Dry, flaky, irritated skin</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Not dermatologist recommended</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card  w-100% bg-base-100  shadow-xl">
+                <div class="card-body">
+                    <h2 class="text-center my-5 text-xl font-bold">With filterbaby</h2>
+
+                    <div class=" flex ">
+                        <div class="mr-5">
+                            <img class="w-[50px] imgspace  " src="./dist/Icon-1.avif" alt="" srcset="">
+                        </div>
+
+                        <div>
+                            <p>Removes 99.9% of both chlorine and chloramine. No other faucet filter can.</p>
+                        </div>
+                    </div>
+                    <div class=" flex ">
+                        <div class="mr-5">
+                            <img class="w-[50px] imgspace  " src="./dist/Icon-1.avif" alt="" srcset="">
+                        </div>
+
+                        <div>
+                            <p>Removes 99.9% of both chlorine and chloramine. No other faucet filter can.</p>
+                        </div>
+                    </div>
+                    <div class=" flex ">
+                        <div class="mr-5">
+                            <img class="w-[30px] imgspace  " src="./dist/Icon-1.avif" alt="" srcset="">
+                        </div>
+
+                        <div>
+                            <p>
+                                Removes 99% of physical contaminants</p>
+                        </div>
+                    </div>
+                    <div class=" flex ">
+                        <div class="mr-5">
+                            <img class="w-[30px] imgspace  " src="./dist/Icon-1.avif" alt="" srcset="">
+                        </div>
+
+                        <div>
+                            <p>Dermatologist approved</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="card  w-96 ">
+                <div class="card-body">
+                    <h2 class="text-center my-5 text-xl font-bold">Without Filterbaby</h2>
+
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Chlorinated water</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>
+                            Hard metals can clog pores</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Dry, flaky, irritated skin</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <img class="w-[30px] mr-5" src="./dist/Icon-2.png" alt="" srcset="">
+                        <p>Not dermatologist recommended</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- js script  -->
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
